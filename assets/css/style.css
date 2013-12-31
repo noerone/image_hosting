@@ -1,0 +1,94 @@
+body {
+	font-family: "Lucida Grande",Arial,sans-serif;
+	font-size: 12px;
+	background-image: url(../images/bg.jpg);	
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
+
+input
+{
+	margin: 0 auto;
+	padding: 0;
+}
+
+div#content
+{
+	width:328px;
+	border:1px solid #CCD;
+	padding: 35px 27px 10px 27px;
+	margin: 125px auto 0 auto;
+	background-color:rgba(255,255,255,0.55);
+	
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	
+	box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	-webkit-box-shadow: 2px 2px 4px #888;
+}
+
+label
+{
+	font-weight: bold;
+	font-size: 20px;
+	margin-left: 12px;
+}
+
+form label
+{
+	cursor: pointer;
+}
+
+input.upload_web, input.upload_browse
+{
+	margin-bottom: 12px;
+}
+
+input.cls_web, input.cls_browse
+{
+	margin:0 12px 25px 0px;
+	height: 25px;
+}
+
+input.upload
+{
+	height: 40px;
+	width: 320px;
+	font-weight: 600;
+	font-size: 17px;
+	color: #CCCCDD;
+}
+
+input.upload:hover
+{
+	color:#555;
+}
+
+h2
+{
+	font-weight: bold;
+}
+
+hr
+{
+	margin-top: 20px;
+	background-color: #CCD;
+}
+
+
+#list-menu span
+{
+	color: #888888;
+	font-size: 9px;
+	
+}
+
+div.output input
+{
+	height: 20px;
+	margin: 5px;
+}
