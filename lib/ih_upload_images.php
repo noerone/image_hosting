@@ -89,19 +89,34 @@
 	# Proses Upload dari URL
 	function proses_upload_web($upload_web,$random)
 	{
-		$link = explode('/', $upload_web);
-		$name = array_reverse($link);
+		$url = $upload_web;
+		$name = basename($url);
+		$upload_image = file_put_contents('storage_upload/'.$random.'/'.$name, file_get_contents($url));
+		$link = BASE_UPLOAD."$random/$name";
+		#$link = explode('/', $upload_web);
+		#$name = array_reverse($link);
 		# echo $name[0];
-		$upload_url = @file_get_contents($upload_web);
+		#$upload_url = @file_get_contents($upload_web);
 		#$upload_images = move_uploaded_file($upload_url, 'storage_upload/'.$random.'/'.$name[0]);
-		$upload_image = file_put_contents('storage_upload/'.$random.'/'.$name[0], $upload_url);
+		#$upload_image = file_put_contents('storage_upload/'.$random.'/'.$name[0], $upload_url);
 		if($upload_image)
 		{
-			echo "Berhasil";
+			echo "<script>jQuery(document).ready(function() {
+			    $.fancybox(
+					'<div class=\"output\"><h2>Upload Images Successfull.</h2><br /><table><tr><td>URL</td><td> : </td><td><input type=\"text\" name=\"url\" value=\"{$link}\" size=50 /></td></tr><tr><td>Forum</td><td> : </td><td><input type=\"text\" name=\"url\" value=\"{$link}\" size=50 /></td></tr><tr><td>Tag</td><td> : </td><td><input type=\"text\" name=\"url\" value=\"{$link}\" size=50 /></td></tr></table></div>',
+					{
+			        	'autoDimensions'	: false,
+						'width'         	: 550,
+						'height'        	: 700,
+						'transitionIn'		: 'none',
+						'transitionOut'		: 'none'
+					}
+				);
+			});</script>";
 		}
 		else 
 		{
-			echo "Berhasil 2";	
+			echo "Error Upload.";	
 		}
 	}
 	
